@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = ({ targetDate, label = 'Starts in' }) => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -31,7 +31,7 @@ const CountdownTimer = ({ targetDate, label = 'Starts in' }) => {
   return (
     <div className="flex items-center gap-2">
       <span className="text-xs text-gray-400 font-medium">{label}:</span>
-      <div className="flex items-center gap-1 font-mono text-xs font-bold text-purple-400 bg-purple-950/40 px-2 py-1 rounded border border-purple-800/30">
+      <div className="flex items-center gap-1 font-mono text-xs font-bold text-cyan-400 bg-cyan-950/40 px-2 py-1 rounded border border-cyan-800/30">
         <span>{String(timeLeft.days).padStart(2, '0')}d</span>
         <span>:</span>
         <span>{String(timeLeft.hours).padStart(2, '0')}h</span>

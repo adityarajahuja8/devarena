@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { hackathonService, teamService, submissionService } from '../services';
@@ -107,23 +107,23 @@ const ParticipantDashboard = () => {
     return (
       <div className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center overflow-hidden py-16 px-4">
         {/* Orbital Background Glows */}
-        <div className="fixed top-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.15)_0%,rgba(14,165,233,0)_70%)] blur-[80px] pointer-events-none -z-10"></div>
+        <div className="fixed top-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(6, 182, 212,0.15)_0%,rgba(14,165,233,0)_70%)] blur-[80px] pointer-events-none -z-10"></div>
         <div className="fixed bottom-0 -left-1/4 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(208,188,255,0.12)_0%,rgba(3,3,3,0)_70%)] blur-[80px] pointer-events-none -z-10"></div>
 
         <div className="relative z-10 w-full max-w-4xl flex flex-col items-center text-center space-y-10">
           {/* Animated 3D Floating Central Visual */}
           <div className="relative group cursor-pointer">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] rounded-full blur-[100px] opacity-20 group-hover:opacity-40 transition-opacity duration-1000"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#06b6d4] to-[#0EA5E9] rounded-full blur-[100px] opacity-20 group-hover:opacity-40 transition-opacity duration-1000"></div>
             <div className="relative w-64 h-64 animate-bounce duration-[6000ms]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#d0bcff] to-[#89ceff] rounded-full opacity-10 blur-2xl"></div>
-              <div className="w-full h-full glass-card rounded-full flex items-center justify-center p-8 overflow-hidden shadow-2xl shadow-[#a078ff]/10">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#67e8f9] to-[#89ceff] rounded-full opacity-10 blur-2xl"></div>
+              <div className="w-full h-full glass-card rounded-full flex items-center justify-center p-8 overflow-hidden shadow-2xl shadow-[#06b6d4]/10">
                 <div className="absolute inset-0 flex items-center justify-center opacity-20">
                   <div className="w-full h-full border-[0.5px] border-white/20 rounded-full scale-75 animate-ping"></div>
                 </div>
                 <div className="relative flex flex-col items-center justify-center space-y-3">
-                  <FiCompass className="text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#d0bcff] to-[#89ceff]" />
+                  <FiCompass className="text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#67e8f9] to-[#89ceff]" />
                   <div className="px-3 py-1 bg-white/5 rounded-full border border-white/10">
-                    <span className="text-[10px] font-mono-code text-[#d0bcff] uppercase tracking-[0.2em]">Idle Phase</span>
+                    <span className="text-[10px] font-mono-code text-[#67e8f9] uppercase tracking-[0.2em]">Idle Phase</span>
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ const ParticipantDashboard = () => {
           {/* Textual Content */}
           <div className="space-y-4 max-w-2xl">
             <h2 className="text-4xl md:text-6xl font-display font-black tracking-tight text-white">
-              The Void is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d0bcff] to-[#89ceff]">waiting.</span>
+              The Void is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67e8f9] to-[#89ceff]">waiting.</span>
             </h2>
             <p className="text-sm md:text-base text-gray-400 max-w-lg mx-auto leading-relaxed font-sans">
               You haven't joined any hackathons yet. Start your journey by exploring active challenges and reshaping reality with code.
@@ -143,7 +143,7 @@ const ParticipantDashboard = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
               <Link
                 to="/hackathons"
-                className="group px-8 py-4 bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] hover:shadow-[0_0_25px_rgba(139,92,246,0.5)] rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95 flex items-center gap-3 text-sm"
+                className="group px-8 py-4 bg-gradient-to-r from-[#06b6d4] to-[#0EA5E9] hover:shadow-[0_0_25px_rgba(6, 182, 212,0.5)] rounded-full font-bold text-white transition-all transform hover:scale-105 active:scale-95 flex items-center gap-3 text-sm"
               >
                 <FiCompass />
                 <span>Browse Hackathons</span>
@@ -188,7 +188,7 @@ const ParticipantDashboard = () => {
       {/* Welcome Header */}
       <section className="space-y-1">
         <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight text-white">
-          Welcome back, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d0bcff] to-[#89ceff]">{user?.name || 'Alex'}</span>
+          Welcome back, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67e8f9] to-[#89ceff]">{user?.name || 'Alex'}</span>
         </h2>
         <p className="text-sm text-gray-400 font-sans">
           Your current deployment is active. 3 days remaining in {activeHackathon?.title || 'Quantum Code 2024'}.
@@ -201,11 +201,11 @@ const ParticipantDashboard = () => {
         <div className="glass-card p-6 rounded-2xl relative overflow-hidden group">
           <div className="flex justify-between items-start mb-4">
             <span className="text-gray-400 font-mono-code text-xs uppercase tracking-widest">Registered</span>
-            <FiBookmark className="text-[#d0bcff] text-xl group-hover:scale-110 transition-transform" />
+            <FiBookmark className="text-[#67e8f9] text-xl group-hover:scale-110 transition-transform" />
           </div>
           <div className="text-4xl font-display font-black text-white">{hackathons.length}</div>
-          <p className="text-[10px] font-mono-code text-[#d0bcff] uppercase mt-2 tracking-tighter">Hackathons Total</p>
-          <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-[#d0bcff]/5 rounded-full blur-2xl"></div>
+          <p className="text-[10px] font-mono-code text-[#67e8f9] uppercase mt-2 tracking-tighter">Hackathons Total</p>
+          <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-[#67e8f9]/5 rounded-full blur-2xl"></div>
         </div>
 
         {/* Stat 2 */}
@@ -259,7 +259,7 @@ const ParticipantDashboard = () => {
             <h3 className="text-2xl font-display font-bold text-white">My Hackathons</h3>
             <Link
               to="/hackathons"
-              className="text-xs font-mono-code text-[#d0bcff] hover:text-white transition-all uppercase tracking-widest underline decoration-[#d0bcff]/20 underline-offset-4"
+              className="text-xs font-mono-code text-[#67e8f9] hover:text-white transition-all uppercase tracking-widest underline decoration-[#67e8f9]/20 underline-offset-4"
             >
               Browse Archive
             </Link>
@@ -271,7 +271,7 @@ const ParticipantDashboard = () => {
                 key={h._id || idx}
                 className="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-white/[0.05] transition-all group border border-white/10"
               >
-                <div className="w-16 h-16 rounded-xl bg-[#2a2a2a] border border-white/5 flex items-center justify-center text-[#d0bcff] group-hover:text-[#89ceff] transition-colors shrink-0">
+                <div className="w-16 h-16 rounded-xl bg-[#2a2a2a] border border-white/5 flex items-center justify-center text-[#67e8f9] group-hover:text-[#89ceff] transition-colors shrink-0">
                   <FiTerminal className="text-3xl" />
                 </div>
 
@@ -330,14 +330,14 @@ const ParticipantDashboard = () => {
 
                 <div className="w-full md:w-auto shrink-0 flex flex-col gap-2">
                   <Link to={`/hackathons/${h._id}`}>
-                    <button className="w-full md:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] text-white text-sm font-bold transition-all">
+                    <button className="w-full md:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-[#06b6d4] to-[#0EA5E9] hover:shadow-[0_0_20px_rgba(6, 182, 212,0.4)] text-white text-sm font-bold transition-all">
                       Go to Workspace
                     </button>
                   </Link>
                   {getRealStatus(h) === 'finished' && (
                     <button
                       onClick={() => setCertModal({ isOpen: true, title: h.title })}
-                      className="w-full md:w-auto px-5 py-2 rounded-full border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
+                      className="w-full md:w-auto px-5 py-2 rounded-full border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/10 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
                     >
                       <FiAward /> Claim Certificate
                     </button>
@@ -352,12 +352,12 @@ const ParticipantDashboard = () => {
         <div className="lg:col-span-4 space-y-8">
           {/* Bookmarked Hackathons Widget */}
           {user?.bookmarks && user.bookmarks.length > 0 && (
-            <div className="glass-card p-8 rounded-2xl space-y-4 border border-purple-500/20">
+            <div className="glass-card p-8 rounded-2xl space-y-4 border border-cyan-500/20">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-display font-bold text-white flex items-center gap-2">
-                  <FiBookmark className="text-purple-400" /> Saved Events
+                  <FiBookmark className="text-cyan-400" /> Saved Events
                 </h3>
-                <span className="text-xs font-mono-code text-purple-300 font-bold bg-purple-500/20 px-2 py-0.5 rounded-full">
+                <span className="text-xs font-mono-code text-cyan-300 font-bold bg-cyan-500/20 px-2 py-0.5 rounded-full">
                   {user.bookmarks.length}
                 </span>
               </div>
@@ -368,7 +368,7 @@ const ParticipantDashboard = () => {
                     to={`/hackathons/${bm._id}`}
                     className="flex items-center justify-between p-3 rounded-xl bg-white/[0.03] hover:bg-white/10 transition-all border border-white/5 group"
                   >
-                    <span className="text-sm font-semibold text-white group-hover:text-purple-300 transition-colors line-clamp-1">
+                    <span className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors line-clamp-1">
                       {bm.title}
                     </span>
                     <FiArrowRight className="text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
@@ -388,7 +388,7 @@ const ParticipantDashboard = () => {
                   <span className="text-[10px] font-mono-code text-gray-400 uppercase">Global Hackathon</span>
                 </div>
                 <div className="text-right">
-                  <div className="text-lg font-display font-black text-[#d0bcff]">#4</div>
+                  <div className="text-lg font-display font-black text-[#67e8f9]">#4</div>
                   <div className="text-[10px] font-mono-code text-gray-400">88.5 PTS</div>
                 </div>
               </div>

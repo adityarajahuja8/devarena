@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { FiCopy, FiCheck, FiRefreshCw } from 'react-icons/fi';
 import toast from 'react-hot-toast';
 
@@ -31,7 +31,7 @@ const JoinCodePill = ({ code, onRegenerate, isLeader = false }) => {
         {isLeader && onRegenerate && (
           <button
             onClick={onRegenerate}
-            className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 text-gray-300 hover:text-purple-300 transition"
+            className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/10 text-gray-300 hover:text-cyan-300 transition"
             title="Regenerate join code"
           >
             <FiRefreshCw size={18} />

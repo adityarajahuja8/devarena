@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EmptyState from '../components/ui/EmptyState';
 import CountdownTimer from '../components/ui/CountdownTimer';
@@ -116,7 +116,7 @@ const HackathonList = () => {
               placeholder="Search hackathons..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-[#0e0e0e] border border-white/10 rounded-xl py-4 pl-12 pr-4 text-[#e5e2e1] placeholder-[#494454] focus:border-[#d0bcff] outline-none transition-all font-sans text-base"
+              className="w-full bg-[#0a0e1a] border border-white/10 rounded-xl py-4 pl-12 pr-4 text-[#e5e2e1] placeholder-[#494454] focus:border-[#67e8f9] outline-none transition-all font-sans text-base"
             />
           </form>
         </header>
@@ -132,7 +132,7 @@ const HackathonList = () => {
                 onClick={() => { setMode(m); setPage(1); }}
                 className={`px-6 py-1.5 rounded-full transition-all ${
                   mode === m
-                    ? 'bg-white/10 text-[#d0bcff] border border-white/10 backdrop-blur-md font-bold'
+                    ? 'bg-white/10 text-[#67e8f9] border border-white/10 backdrop-blur-md font-bold'
                     : 'text-[#494454] hover:text-[#e5e2e1]'
                 }`}
               >
@@ -190,7 +190,7 @@ const HackathonList = () => {
               onClick={() => { setStatus(status === 'ongoing' ? '' : 'ongoing'); setPage(1); }}
               className={`border px-4 py-2 rounded-full transition-colors ${
                 status === 'ongoing'
-                  ? 'bg-[#d0bcff]/20 border-[#d0bcff]/40 text-[#d0bcff] font-bold'
+                  ? 'bg-[#67e8f9]/20 border-[#67e8f9]/40 text-[#67e8f9] font-bold'
                   : 'bg-[#1c1b1b] border-white/10 text-[#494454] hover:text-[#e5e2e1]'
               }`}
             >
@@ -243,7 +243,7 @@ const HackathonList = () => {
                       alt={h.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4 bg-[#030303]/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                    <div className="absolute top-4 left-4 bg-[#050810]/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
                       <span className="text-[11px] font-mono-code text-[#89ceff]">
                         {h.mode || 'Online'} {h.location ? `• ${h.location}` : ''}
                       </span>
@@ -256,8 +256,8 @@ const HackathonList = () => {
                           onClick={(e) => handleToggleBookmark(e, h._id)}
                           className={`absolute top-4 right-4 p-2 rounded-full backdrop-blur-md border transition-all ${
                             isSaved
-                              ? 'bg-purple-600 text-white border-purple-400 shadow-[0_0_12px_rgba(168,85,247,0.5)]'
-                              : 'bg-[#030303]/70 text-gray-400 border-white/10 hover:text-white hover:bg-white/20'
+                              ? 'bg-cyan-600 text-white border-cyan-400 shadow-[0_0_12px_rgba(168,85,247,0.5)]'
+                              : 'bg-[#050810]/70 text-gray-400 border-white/10 hover:text-white hover:bg-white/20'
                           }`}
                           title={isSaved ? 'Remove Bookmark' : 'Bookmark Hackathon'}
                         >
@@ -280,7 +280,7 @@ const HackathonList = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-display text-xl font-bold text-[#e5e2e1] mb-2 group-hover:text-[#d0bcff] transition">
+                    <h3 className="font-display text-xl font-bold text-[#e5e2e1] mb-2 group-hover:text-[#67e8f9] transition">
                       {h.title}
                     </h3>
 
@@ -314,7 +314,7 @@ const HackathonList = () => {
                       </div>
 
                       <Link to={`/hackathons/${h._id}`} className="block">
-                        <button className="w-full py-3 rounded-lg bg-gradient-to-r from-[#d0bcff] to-[#89ceff] hover:shadow-[0_0_15px_rgba(208,188,255,0.5)] hover:scale-[1.01] text-[#3c0091] font-bold text-sm transition-all duration-200">
+                        <button className="w-full py-3 rounded-lg bg-gradient-to-r from-[#67e8f9] to-[#89ceff] hover:shadow-[0_0_15px_rgba(208,188,255,0.5)] hover:scale-[1.01] text-[#3c0091] font-bold text-sm transition-all duration-200">
                           View Details
                         </button>
                       </Link>
@@ -344,13 +344,13 @@ const HackathonList = () => {
               <FiChevronLeft size={18} />
             </button>
 
-            <button className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${page === 1 ? 'bg-[#d0bcff] text-[#3c0091]' : 'text-gray-400 hover:text-white'}`}>
+            <button className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${page === 1 ? 'bg-[#67e8f9] text-[#3c0091]' : 'text-gray-400 hover:text-white'}`}>
               1
             </button>
-            <button className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${page === 2 ? 'bg-[#d0bcff] text-[#3c0091]' : 'text-gray-400 hover:text-white'}`}>
+            <button className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${page === 2 ? 'bg-[#67e8f9] text-[#3c0091]' : 'text-gray-400 hover:text-white'}`}>
               2
             </button>
-            <button className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${page === 3 ? 'bg-[#d0bcff] text-[#3c0091]' : 'text-gray-400 hover:text-white'}`}>
+            <button className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${page === 3 ? 'bg-[#67e8f9] text-[#3c0091]' : 'text-gray-400 hover:text-white'}`}>
               3
             </button>
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Card from '../components/ui/Card';
@@ -181,12 +181,12 @@ const HackathonDetail = () => {
               <Badge status={realStatusLabel}>
                 {isEventOver ? 'Completed' : isOngoing ? 'Ongoing' : isRegOpen ? 'Upcoming' : 'Reg. Closed'}
               </Badge>
-              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/40 text-purple-300">
+              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/40 text-cyan-300">
                 {hackathon.mode}
               </span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold font-display text-white">{hackathon.title}</h1>
-            <p className="text-sm text-purple-300 font-medium">Theme: {hackathon.theme}</p>
+            <p className="text-sm text-cyan-300 font-medium">Theme: {hackathon.theme}</p>
           </div>
 
           {/* Action CTAs */}
@@ -240,7 +240,7 @@ const HackathonDetail = () => {
             {isAuthenticated && (
               <Button
                 variant="outline"
-                icon={<FiBookmark className={isBookmarked ? 'text-purple-400 fill-purple-400' : ''} />}
+                icon={<FiBookmark className={isBookmarked ? 'text-cyan-400 fill-cyan-400' : ''} />}
                 onClick={handleToggleBookmark}
               >
                 {isBookmarked ? 'Saved' : 'Save'}
@@ -260,7 +260,7 @@ const HackathonDetail = () => {
           </div>
           <div>
             <span className="text-gray-400 block">Registered Teams</span>
-            <strong className="text-purple-300 text-lg">{teamCount || 0} Teams</strong>
+            <strong className="text-cyan-300 text-lg">{teamCount || 0} Teams</strong>
           </div>
           <div>
             <span className="text-gray-400 block">{isEventOver ? 'Event' : 'Starts In'}</span>
@@ -307,7 +307,7 @@ const HackathonDetail = () => {
                   <div key={i} className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
                     <div className="flex justify-between items-center text-sm font-bold text-white">
                       <span>{c.name}</span>
-                      <span className="text-purple-400 font-mono">{c.maxMarks} Marks</span>
+                      <span className="text-cyan-400 font-mono">{c.maxMarks} Marks</span>
                     </div>
                     {c.description && <p className="text-xs text-gray-400">{c.description}</p>}
                   </div>
@@ -340,7 +340,7 @@ const HackathonDetail = () => {
           <Card className="p-6 space-y-4">
             <h3 className="text-lg font-bold font-display text-white">Organizer</h3>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-purple-600/30 flex items-center justify-center font-bold text-purple-300">
+              <div className="w-10 h-10 rounded-full bg-cyan-600/30 flex items-center justify-center font-bold text-cyan-300">
                 {hackathon.organizer?.name?.[0] || 'O'}
               </div>
               <div>
@@ -352,8 +352,8 @@ const HackathonDetail = () => {
 
           {/* Quick register CTA in sidebar */}
           {canRegister && !isRegistered && isAuthenticated && !myTeam && (
-            <div className="glass-card p-6 rounded-2xl border border-[#a078ff]/30 space-y-3 text-center">
-              <p className="text-xs font-mono-code text-[#d0bcff] uppercase tracking-wider">Ready to compete?</p>
+            <div className="glass-card p-6 rounded-2xl border border-[#06b6d4]/30 space-y-3 text-center">
+              <p className="text-xs font-mono-code text-[#67e8f9] uppercase tracking-wider">Ready to compete?</p>
               <Button variant="primary" className="w-full" onClick={() => setRegModalOpen(true)}>
                 Register Now
               </Button>
@@ -373,11 +373,11 @@ const HackathonDetail = () => {
           <button
             onClick={handleRegister}
             disabled={registering}
-            className="w-full text-left p-5 rounded-2xl border border-[#a078ff]/30 bg-[#a078ff]/5 hover:bg-[#a078ff]/10 hover:border-[#a078ff]/60 transition-all group"
+            className="w-full text-left p-5 rounded-2xl border border-[#06b6d4]/30 bg-[#06b6d4]/5 hover:bg-[#06b6d4]/10 hover:border-[#06b6d4]/60 transition-all group"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#a078ff]/20 border border-[#a078ff]/40 flex items-center justify-center text-[#d0bcff]">
+                <div className="w-12 h-12 rounded-xl bg-[#06b6d4]/20 border border-[#06b6d4]/40 flex items-center justify-center text-[#67e8f9]">
                   <FiUsers size={22} />
                 </div>
                 <div>
@@ -387,7 +387,7 @@ const HackathonDetail = () => {
                   </div>
                 </div>
               </div>
-              <FiArrowRight className="text-[#d0bcff] group-hover:translate-x-1 transition-transform" />
+              <FiArrowRight className="text-[#67e8f9] group-hover:translate-x-1 transition-transform" />
             </div>
           </button>
 
@@ -414,7 +414,7 @@ const HackathonDetail = () => {
           </button>
 
           {registering && (
-            <p className="text-center text-xs font-mono-code text-[#d0bcff] animate-pulse">Registering...</p>
+            <p className="text-center text-xs font-mono-code text-[#67e8f9] animate-pulse">Registering...</p>
           )}
         </div>
       </Modal>

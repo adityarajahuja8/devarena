@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Card from '../components/ui/Card';
@@ -156,11 +156,11 @@ const TeamPage = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 space-y-10">
       {/* Ambient Glow */}
-      <div className="fixed top-[15%] right-[15%] w-[450px] h-[450px] bg-[#a078ff]/10 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse"></div>
+      <div className="fixed top-[15%] right-[15%] w-[450px] h-[450px] bg-[#06b6d4]/10 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse"></div>
 
       {/* Header */}
       <div>
-        <span className="text-xs font-mono-code uppercase tracking-widest text-[#d0bcff]">Roster Management</span>
+        <span className="text-xs font-mono-code uppercase tracking-widest text-[#67e8f9]">Roster Management</span>
         <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-white mt-1">
           {team ? team.name : hackathon?.title ? `Teaming for ${hackathon.title}` : 'Team Dashboard'}
         </h1>
@@ -172,7 +172,7 @@ const TeamPage = () => {
       {!team ? (
         /* Empty State */
         <div className="glass-card p-10 md:p-14 text-center rounded-3xl border border-white/10 space-y-6">
-          <div className="w-16 h-16 rounded-2xl bg-[#a078ff]/10 border border-[#a078ff]/30 flex items-center justify-center text-[#d0bcff] text-3xl mx-auto">
+          <div className="w-16 h-16 rounded-2xl bg-[#06b6d4]/10 border border-[#06b6d4]/30 flex items-center justify-center text-[#67e8f9] text-3xl mx-auto">
             <FiUsers />
           </div>
           <div className="space-y-2">
@@ -207,7 +207,7 @@ const TeamPage = () => {
                 <div className="flex items-center gap-3">
                   <h2 className="text-2xl sm:text-3xl font-bold font-display text-white">{team.name}</h2>
                   {isLeader && (
-                    <span className="px-3 py-1 rounded-full bg-[#a078ff]/20 text-[#d0bcff] text-[10px] font-mono-code uppercase tracking-wider border border-[#a078ff]/30 flex items-center gap-1.5">
+                    <span className="px-3 py-1 rounded-full bg-[#06b6d4]/20 text-[#67e8f9] text-[10px] font-mono-code uppercase tracking-wider border border-[#06b6d4]/30 flex items-center gap-1.5">
                       <FaCrown className="text-amber-400" /> LEADER
                     </span>
                   )}
@@ -238,7 +238,7 @@ const TeamPage = () => {
                 <span className="text-[#89ceff]">HACKATHON_MODE: ACTIVE</span>
               </div>
 
-              <div className="divide-y divide-white/5 bg-[#0e0e0e]/80 rounded-2xl border border-white/10 overflow-hidden">
+              <div className="divide-y divide-white/5 bg-[#0a0e1a]/80 rounded-2xl border border-white/10 overflow-hidden">
                 {currentMembers.map((m) => {
                   const mIsLeader = m._id === team.leader?._id;
                   const isYou = m._id === user?._id;
@@ -246,11 +246,11 @@ const TeamPage = () => {
                     <div key={m._id} className="p-5 flex items-center justify-between hover:bg-white/[0.02] transition">
                       <div className="flex items-center gap-4">
                         <div className="relative">
-                          <div className="w-11 h-11 rounded-xl bg-[#a078ff]/20 border border-[#a078ff]/40 flex items-center justify-center font-bold text-sm text-[#d0bcff] uppercase">
+                          <div className="w-11 h-11 rounded-xl bg-[#06b6d4]/20 border border-[#06b6d4]/40 flex items-center justify-center font-bold text-sm text-[#67e8f9] uppercase">
                             {m.name?.[0] || 'M'}
                           </div>
                           {mIsLeader && (
-                            <div className="absolute -top-1.5 -right-1.5 bg-[#0e0e0e] border border-amber-500/50 rounded-full p-0.5">
+                            <div className="absolute -top-1.5 -right-1.5 bg-[#0a0e1a] border border-amber-500/50 rounded-full p-0.5">
                               <FaCrown className="text-amber-400 text-[10px]" />
                             </div>
                           )}

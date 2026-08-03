@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import Card, { StatCard } from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import Badge from '../components/ui/Badge';
@@ -154,7 +154,7 @@ const AdminDashboard = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
       <div>
-        <span className="text-xs font-bold uppercase tracking-widest text-purple-400">Governance Portal</span>
+        <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Governance Portal</span>
         <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-white mt-1">Administrator Command Center</h1>
         <p className="text-sm text-gray-400 mt-1">
           Review organizer/judge pending applications, govern ecosystem users, and inspect analytics.
@@ -175,43 +175,43 @@ const AdminDashboard = () => {
         <button
           onClick={() => setActiveTab('requests')}
           className={`pb-4 font-display font-bold text-sm transition relative ${
-            activeTab === 'requests' ? 'text-purple-400' : 'text-gray-400 hover:text-white'
+            activeTab === 'requests' ? 'text-cyan-400' : 'text-gray-400 hover:text-white'
           }`}
         >
           Access Requests Queue ({requests.length})
-          {activeTab === 'requests' && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500" />}
+          {activeTab === 'requests' && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-500" />}
         </button>
 
         <button
           onClick={() => setActiveTab('users')}
           className={`pb-4 font-display font-bold text-sm transition relative ${
-            activeTab === 'users' ? 'text-purple-400' : 'text-gray-400 hover:text-white'
+            activeTab === 'users' ? 'text-cyan-400' : 'text-gray-400 hover:text-white'
           }`}
         >
           User Management ({users.length})
-          {activeTab === 'users' && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500" />}
+          {activeTab === 'users' && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-500" />}
         </button>
 
         <button
           onClick={() => setActiveTab('analytics')}
           className={`pb-4 font-display font-bold text-sm transition relative flex items-center gap-2 ${
-            activeTab === 'analytics' ? 'text-purple-400' : 'text-gray-400 hover:text-white'
+            activeTab === 'analytics' ? 'text-cyan-400' : 'text-gray-400 hover:text-white'
           }`}
         >
           <FiTrendingUp size={14} />
           Platform Analytics
-          {activeTab === 'analytics' && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500" />}
+          {activeTab === 'analytics' && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-500" />}
         </button>
 
         <button
           onClick={() => setActiveTab('auditLogs')}
           className={`pb-4 font-display font-bold text-sm transition relative flex items-center gap-2 ${
-            activeTab === 'auditLogs' ? 'text-purple-400' : 'text-gray-400 hover:text-white'
+            activeTab === 'auditLogs' ? 'text-cyan-400' : 'text-gray-400 hover:text-white'
           }`}
         >
           <FiActivity size={14} />
           Activity Log ({auditLogs.length})
-          {activeTab === 'auditLogs' && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500" />}
+          {activeTab === 'auditLogs' && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-500" />}
         </button>
       </div>
 
@@ -234,7 +234,7 @@ const AdminDashboard = () => {
                   {requests.map((r) => (
                     <tr key={r._id}>
                       <td className="font-bold text-white flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-purple-600/30 flex items-center justify-center text-xs text-purple-300">
+                        <div className="w-8 h-8 rounded-full bg-cyan-600/30 flex items-center justify-center text-xs text-cyan-300">
                           {r.name[0]}
                         </div>
                         {r.name}
@@ -301,7 +301,7 @@ const AdminDashboard = () => {
                     <div className="text-xs text-gray-400 font-normal">{u.email}</div>
                   </td>
                   <td>
-                    <span className="uppercase text-xs font-semibold text-purple-300">{u.role}</span>
+                    <span className="uppercase text-xs font-semibold text-cyan-300">{u.role}</span>
                   </td>
                   <td><Badge status={u.status}>{u.status}</Badge></td>
                   <td className="text-xs text-gray-400">{new Date(u.createdAt).toLocaleDateString()}</td>
@@ -331,7 +331,7 @@ const AdminDashboard = () => {
             <div className="glass-card rounded-2xl p-5 border border-white/10 space-y-1">
               <p className="text-[10px] font-mono-code uppercase tracking-widest text-gray-400">Total Users</p>
               <p className="text-3xl font-black font-display text-white">{analytics?.stats?.totalUsers ?? '—'}</p>
-              <p className="text-[10px] font-mono-code text-[#d0bcff]">All roles combined</p>
+              <p className="text-[10px] font-mono-code text-[#67e8f9]">All roles combined</p>
             </div>
             <div className="glass-card rounded-2xl p-5 border border-white/10 space-y-1">
               <p className="text-[10px] font-mono-code uppercase tracking-widest text-gray-400">Hackathons</p>
@@ -361,7 +361,7 @@ const AdminDashboard = () => {
           {analytics?.recentHackathons?.length > 0 && (
             <div className="glass-card rounded-2xl p-6 border border-white/10 space-y-4">
               <h3 className="text-sm font-bold font-display text-white flex items-center gap-2">
-                <FiCalendar className="text-[#d0bcff]" /> Recent Hackathons
+                <FiCalendar className="text-[#67e8f9]" /> Recent Hackathons
               </h3>
               <div className="overflow-x-auto">
                 <table className="data-table">
@@ -395,7 +395,7 @@ const AdminDashboard = () => {
         <div className="space-y-6">
           <Card className="p-6">
             <h3 className="text-lg font-display font-bold text-white mb-4 flex items-center gap-2">
-              <FiActivity className="text-purple-400" /> Platform System Activity Log
+              <FiActivity className="text-cyan-400" /> Platform System Activity Log
             </h3>
             {auditLogs.length > 0 ? (
               <div className="overflow-x-auto">

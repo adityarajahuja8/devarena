@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const Card = ({ children, className = '', hover = true, glow = false, onClick, ...props }) => {
   const handleMouseMove = (e) => {
@@ -25,7 +25,7 @@ const Card = ({ children, className = '', hover = true, glow = false, onClick, .
       onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`glass-card p-6 ${glow ? 'shadow-[0_0_30px_rgba(208,188,255,0.25)] border-[#d0bcff]/40' : ''} ${
+      className={`glass-card p-6 ${glow ? 'shadow-[0_0_30px_rgba(208,188,255,0.25)] border-[#67e8f9]/40' : ''} ${
         onClick ? 'cursor-pointer' : ''
       } ${className}`}
       style={{ transformStyle: 'preserve-3d', transition: 'transform 0.15s ease-out, border-color 0.3s ease, box-shadow 0.3s ease' }}
@@ -37,7 +37,7 @@ const Card = ({ children, className = '', hover = true, glow = false, onClick, .
 };
 
 export const GradientCard = ({ children, className = '', onClick }) => (
-  <Card onClick={onClick} className={`border border-[#a078ff]/30 ${className}`}>
+  <Card onClick={onClick} className={`border border-[#06b6d4]/30 ${className}`}>
     {children}
   </Card>
 );
@@ -52,7 +52,7 @@ export const StatCard = ({ label, value, icon, gradient = false, suffix = '' }) 
         <span className="text-2xl">{icon}</span>
       </div>
     )}
-    <div className={`text-3xl font-extrabold mb-1 font-display ${gradient ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#d0bcff] to-[#89ceff]' : 'text-white'}`}>
+    <div className={`text-3xl font-extrabold mb-1 font-display ${gradient ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#67e8f9] to-[#89ceff]' : 'text-white'}`}>
       {value}{suffix}
     </div>
     <div className="text-xs font-mono-code uppercase tracking-wider text-gray-400">{label}</div>

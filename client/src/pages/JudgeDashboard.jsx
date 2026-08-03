@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import Modal from '../components/ui/Modal';
 import { Textarea } from '../components/ui/Input';
 import Skeleton, { SkeletonTable } from '../components/ui/Skeleton';
@@ -145,12 +145,12 @@ const JudgeDashboard = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       {/* Glow */}
-      <div className="fixed top-[15%] left-[20%] w-[500px] h-[500px] bg-[#a078ff]/10 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse" />
+      <div className="fixed top-[15%] left-[20%] w-[500px] h-[500px] bg-[#06b6d4]/10 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse" />
 
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div>
-          <span className="text-xs font-mono-code uppercase tracking-widest text-[#d0bcff]">JUDGE PORTAL</span>
+          <span className="text-xs font-mono-code uppercase tracking-widest text-[#67e8f9]">JUDGE PORTAL</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-white mt-1">Judge Console</h1>
         </div>
 
@@ -161,13 +161,13 @@ const JudgeDashboard = () => {
               <circle cx="18" cy="18" r="15.9" fill="none" stroke="#ffffff10" strokeWidth="3" />
               <circle
                 cx="18" cy="18" r="15.9" fill="none"
-                stroke="#a078ff" strokeWidth="3"
+                stroke="#06b6d4" strokeWidth="3"
                 strokeDasharray={`${progressPct} ${100 - progressPct}`}
                 strokeDashoffset="0"
                 strokeLinecap="round"
               />
             </svg>
-            <span className="absolute inset-0 flex items-center justify-center text-[10px] font-mono-code font-bold text-[#d0bcff]">
+            <span className="absolute inset-0 flex items-center justify-center text-[10px] font-mono-code font-bold text-[#67e8f9]">
               {progressPct}%
             </span>
           </div>
@@ -185,10 +185,10 @@ const JudgeDashboard = () => {
         <div className="glass-card p-5 rounded-2xl border border-white/10">
           <div className="flex justify-between items-start mb-2">
             <span className="text-[10px] font-mono-code uppercase tracking-widest text-gray-400">Hackathons</span>
-            <FiLayers className="text-[#d0bcff]" />
+            <FiLayers className="text-[#67e8f9]" />
           </div>
           <div className="text-3xl font-black font-display text-white">{stats.hackathonsAssigned || 0}</div>
-          <p className="text-[10px] font-mono-code text-[#d0bcff] mt-1">Assigned to you</p>
+          <p className="text-[10px] font-mono-code text-[#67e8f9] mt-1">Assigned to you</p>
         </div>
 
         <div className="glass-card p-5 rounded-2xl border border-white/10">
@@ -223,7 +223,7 @@ const JudgeDashboard = () => {
       {assignedHackathons.length > 0 && (
         <div className="space-y-4">
           <h3 className="text-lg font-bold font-display text-white flex items-center gap-2">
-            <FiAward className="text-[#d0bcff]" /> Your Assigned Hackathons
+            <FiAward className="text-[#67e8f9]" /> Your Assigned Hackathons
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {assignedHackathons.map((h) => {
@@ -241,17 +241,17 @@ const JudgeDashboard = () => {
                   onClick={() => setSelectedHackathon(isActive ? null : h._id)}
                   className={`text-left glass-card p-5 rounded-2xl border transition-all ${
                     isActive
-                      ? 'border-[#a078ff] shadow-lg shadow-[#a078ff]/20'
+                      ? 'border-[#06b6d4] shadow-lg shadow-[#06b6d4]/20'
                       : 'border-white/10 hover:border-white/20'
                   }`}
                 >
                   <div className="flex justify-between items-start mb-2">
                     <span className={`text-[10px] font-mono-code uppercase tracking-wider px-2 py-0.5 rounded ${
                       h.status === 'ongoing' ? 'bg-emerald-500/20 text-emerald-400' :
-                      h.status === 'upcoming' ? 'bg-[#d0bcff]/20 text-[#d0bcff]' :
+                      h.status === 'upcoming' ? 'bg-[#67e8f9]/20 text-[#67e8f9]' :
                       'bg-gray-500/20 text-gray-400'
                     }`}>{h.status}</span>
-                    <FiChevronRight className={`text-gray-400 transition ${isActive ? 'rotate-90 text-[#d0bcff]' : ''}`} />
+                    <FiChevronRight className={`text-gray-400 transition ${isActive ? 'rotate-90 text-[#67e8f9]' : ''}`} />
                   </div>
                   <h4 className="font-bold text-white text-base mt-1">{h.title}</h4>
                   <p className="text-xs text-gray-400 font-mono-code mb-3">{h.theme}</p>
@@ -269,12 +269,12 @@ const JudgeDashboard = () => {
       {/* Submissions Table */}
       <div className="glass-card rounded-3xl p-6 sm:p-8 space-y-6 border border-white/10">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-white/10 pb-4">
-          <div className="flex items-center gap-2 p-1 bg-[#0e0e0e] rounded-xl border border-white/10">
+          <div className="flex items-center gap-2 p-1 bg-[#0a0e1a] rounded-xl border border-white/10">
             <button
               onClick={() => setFilterTab('pending')}
               className={`px-4 py-2 rounded-lg text-xs font-mono-code uppercase tracking-wider font-bold transition ${
                 filterTab === 'pending'
-                  ? 'bg-[#a078ff]/20 text-[#d0bcff] border border-[#a078ff]/30'
+                  ? 'bg-[#06b6d4]/20 text-[#67e8f9] border border-[#06b6d4]/30'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -320,7 +320,7 @@ const JudgeDashboard = () => {
                     <tr key={sub._id}>
                       <td>
                         <div className="font-bold text-white">{sub.projectName}</div>
-                        <div className="text-xs font-mono-code text-[#d0bcff]">
+                        <div className="text-xs font-mono-code text-[#67e8f9]">
                           {sub.team?.name || 'Unknown Team'}
                         </div>
                       </td>
@@ -399,7 +399,7 @@ const JudgeDashboard = () => {
         {selectedSubmission && (
           <form onSubmit={handleSubmitEvaluation} className="space-y-6">
             {/* Submission Info */}
-            <div className="p-4 rounded-2xl bg-[#0e0e0e] border border-white/10 space-y-2">
+            <div className="p-4 rounded-2xl bg-[#0a0e1a] border border-white/10 space-y-2">
               <h3 className="text-base font-bold font-display text-white">{selectedSubmission.projectName}</h3>
               <p className="text-xs text-gray-300">
                 <span className="text-gray-500">Team:</span> {selectedSubmission.team?.name}
@@ -417,7 +417,7 @@ const JudgeDashboard = () => {
               {selectedSubmission.techStack?.length > 0 && (
                 <div className="flex flex-wrap gap-1 pt-1">
                   {selectedSubmission.techStack.map((t) => (
-                    <span key={t} className="text-[10px] font-mono-code px-2 py-0.5 rounded bg-[#a078ff]/10 text-[#d0bcff] border border-[#a078ff]/20">
+                    <span key={t} className="text-[10px] font-mono-code px-2 py-0.5 rounded bg-[#06b6d4]/10 text-[#67e8f9] border border-[#06b6d4]/20">
                       {t}
                     </span>
                   ))}
@@ -434,7 +434,7 @@ const JudgeDashboard = () => {
                 const pct = Math.round((totalScore / totalMax) * 100);
                 const ringColor = pct >= 70 ? '#34d399' : pct >= 40 ? '#fbbf24' : '#f87171';
                 return (
-                  <div className="flex items-center justify-between p-4 rounded-2xl bg-[#0e0e0e] border border-white/10">
+                  <div className="flex items-center justify-between p-4 rounded-2xl bg-[#0a0e1a] border border-white/10">
                     <div>
                       <div className="text-xs font-mono-code uppercase tracking-wider text-gray-400 mb-0.5">Scoring Rubric</div>
                       <div className="text-[11px] font-mono-code text-gray-500">Drag sliders to assign marks per criterion</div>
@@ -476,7 +476,7 @@ const JudgeDashboard = () => {
                   : pct >= 40
                   ? '#fbbf24'
                   : pct > 0
-                  ? '#a078ff'
+                  ? '#06b6d4'
                   : '#374151';
 
                 return (

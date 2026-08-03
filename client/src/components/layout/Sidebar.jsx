@@ -29,16 +29,16 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-64 border-r border-white/10 bg-[#0e0e0e]/95 backdrop-blur-3xl z-40 flex flex-col hidden lg:flex font-sans">
+    <aside className="fixed left-0 top-0 bottom-0 w-64 border-r border-[#06b6d4]/10 bg-[#070b14]/95 backdrop-blur-3xl z-40 flex flex-col hidden lg:flex font-sans">
       {/* Brand Header */}
       <div className="p-6 border-b border-white/10">
         <Link to={dashboardLink} className="flex items-center gap-3 group">
 
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#a078ff] to-[#6d3bd7] flex items-center justify-center font-bold text-white">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#06b6d4] to-[#0e7490] flex items-center justify-center font-bold text-white">
             <FiHexagon size={18} />
           </div>
           <div>
-            <h1 className="text-lg font-display font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#d0bcff] to-[#89ceff]">
+            <h1 className="text-lg font-display font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#67e8f9] to-[#38bdf8]">
               DevArena
             </h1>
             <p className="text-[9px] font-mono-code uppercase tracking-widest text-gray-500">Where Innovation Competes</p>
@@ -58,11 +58,11 @@ const Sidebar = () => {
                 to={item.path}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
                   isActive
-                    ? 'bg-[#a078ff]/15 text-[#d0bcff] border-r-2 border-[#a078ff] font-bold shadow-lg shadow-[#a078ff]/10'
+                    ? 'bg-[#06b6d4]/15 text-[#67e8f9] border-r-2 border-[#06b6d4] font-bold shadow-lg shadow-[#06b6d4]/10'
                     : 'text-gray-400 hover:text-white hover:bg-white/5'
                 }`}
               >
-                <Icon className={`text-lg ${isActive ? 'text-[#d0bcff]' : 'text-gray-400'}`} />
+                <Icon className={`text-lg ${isActive ? 'text-[#67e8f9]' : 'text-gray-400'}`} />
                 <span className="uppercase tracking-wider">{item.label}</span>
               </Link>
             );
@@ -74,7 +74,7 @@ const Sidebar = () => {
       {/* Action Button tailored by role */}
       <div className="p-6 space-y-4 border-t border-white/5">
         <button
-          className="w-full py-3 rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] hover:scale-[1.02] active:scale-95 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all"
+          className="w-full py-3 rounded-xl bg-gradient-to-r from-[#06b6d4] to-[#0369a1] hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:scale-[1.02] active:scale-95 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all"
           onClick={() => {
             if (isOrganizer) {
               // If already on dashboard, just open modal via event
@@ -103,12 +103,12 @@ const Sidebar = () => {
         {/* User Mini Profile Card */}
         <div className="flex items-center justify-between p-3 rounded-xl bg-white/[0.03] border border-white/5">
           <div className="flex items-center gap-3 overflow-hidden">
-            <div className="w-9 h-9 rounded-full bg-[#a078ff]/20 border border-[#a078ff]/40 flex items-center justify-center font-bold text-xs text-[#d0bcff] uppercase shrink-0">
+            <div className="w-9 h-9 rounded-full bg-[#06b6d4]/20 border border-[#06b6d4]/40 flex items-center justify-center font-bold text-xs text-[#67e8f9] uppercase shrink-0">
               {user?.name?.[0] || 'U'}
             </div>
             <div className="flex flex-col truncate">
               <span className="text-xs font-bold text-white truncate">{user?.name}</span>
-              <span className="text-[10px] font-mono-code text-[#d0bcff] uppercase tracking-wider truncate">{user?.role}</span>
+              <span className="text-[10px] font-mono-code text-[#67e8f9] uppercase tracking-wider truncate">{user?.role}</span>
             </div>
           </div>
           <button

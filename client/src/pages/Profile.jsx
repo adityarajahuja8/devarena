@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import Card from '../components/ui/Card';
 import Input, { Textarea } from '../components/ui/Input';
@@ -80,15 +80,15 @@ const Profile = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-1 space-y-6">
           <Card className="text-center p-6">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-purple-600 to-blue-600 p-[2px] mx-auto mb-4">
-              <div className="w-full h-full bg-[#08080B] rounded-full flex items-center justify-center text-3xl font-bold font-display text-purple-300">
+            <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-cyan-600 to-blue-600 p-[2px] mx-auto mb-4">
+              <div className="w-full h-full bg-[#08080B] rounded-full flex items-center justify-center text-3xl font-bold font-display text-cyan-300">
                 {user?.name?.[0] || 'U'}
               </div>
             </div>
             <h3 className="text-lg font-bold text-white">{user?.name}</h3>
             <p className="text-xs text-gray-400 mb-4">{user?.email}</p>
             <div className="pt-4 border-t border-white/10 text-xs text-gray-400 space-y-2 text-left">
-              <div><strong className="text-gray-300">Role:</strong> <span className="uppercase text-purple-400 font-semibold">{user?.role}</span></div>
+              <div><strong className="text-gray-300">Role:</strong> <span className="uppercase text-cyan-400 font-semibold">{user?.role}</span></div>
               <div><strong className="text-gray-300">Status:</strong> <span className="uppercase text-emerald-400 font-semibold">{user?.status}</span></div>
               <div><strong className="text-gray-300">Joined:</strong> {new Date(user?.createdAt).toLocaleDateString()}</div>
             </div>
@@ -98,7 +98,7 @@ const Profile = () => {
         <div className="md:col-span-2 space-y-8">
           <Card className="p-8">
             <h3 className="text-lg font-bold font-display text-white mb-6 flex items-center gap-2">
-              <FiUser className="text-purple-400" /> Personal Details
+              <FiUser className="text-cyan-400" /> Personal Details
             </h3>
             <form onSubmit={handleProfileSubmit} className="space-y-4">
               <Input
@@ -141,7 +141,7 @@ const Profile = () => {
 
           <Card className="p-8">
             <h3 className="text-lg font-bold font-display text-white mb-6 flex items-center gap-2">
-              <FiLock className="text-purple-400" /> Change Password
+              <FiLock className="text-cyan-400" /> Change Password
             </h3>
             <form onSubmit={handlePassSubmit} className="space-y-4">
               <Input

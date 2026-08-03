@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import io from 'socket.io-client';
 import Badge from '../components/ui/Badge';
@@ -9,7 +9,7 @@ import { FiAward, FiUsers, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 // Color based on % score
 const scoreColor = (pct) =>
-  pct >= 70 ? '#34d399' : pct >= 40 ? '#fbbf24' : '#a078ff';
+  pct >= 70 ? '#34d399' : pct >= 40 ? '#fbbf24' : '#06b6d4';
 
 // Expandable row showing per-criterion breakdown
 const BreakdownRow = ({ item, colSpan }) => {
@@ -29,7 +29,7 @@ const BreakdownRow = ({ item, colSpan }) => {
             const pct = c.maxMarks > 0 ? (raw / c.maxMarks) * 100 : 0;
             const color = scoreColor(pct);
             return (
-              <div key={c.name} className="p-3 rounded-xl bg-[#0e0e0e] border border-white/10 space-y-2">
+              <div key={c.name} className="p-3 rounded-xl bg-[#0a0e1a] border border-white/10 space-y-2">
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-mono-code text-gray-300 font-semibold">{c.name}</span>
                   <span className="text-sm font-black font-display" style={{ color }}>
@@ -119,7 +119,7 @@ const LeaderboardPage = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 space-y-12">
-      <div className="fixed top-[20%] left-[20%] w-[500px] h-[500px] bg-[#a078ff]/10 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse" />
+      <div className="fixed top-[20%] left-[20%] w-[500px] h-[500px] bg-[#06b6d4]/10 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse" />
 
       {/* Header */}
       <div className="space-y-3">
@@ -129,12 +129,12 @@ const LeaderboardPage = () => {
             LIVE · REAL-TIME SCORES
           </span>
           {liveConnected && (
-            <span className="text-xs font-mono-code text-[#d0bcff]">Socket.io Sync Active</span>
+            <span className="text-xs font-mono-code text-[#67e8f9]">Socket.io Sync Active</span>
           )}
         </div>
         <h1 className="text-4xl sm:text-6xl font-black font-display tracking-tight text-white">
           {hackathon?.title || 'Hackathon'} <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d0bcff] via-[#89ceff] to-[#ffafd3]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67e8f9] via-[#89ceff] to-[#ffafd3]">
             Leaderboard
           </span>
         </h1>
@@ -246,7 +246,7 @@ const LeaderboardPage = () => {
                         </td>
                         <td>
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-lg bg-[#0e0e0e] border border-white/10 flex items-center justify-center text-[#d0bcff]">
+                            <div className="w-8 h-8 rounded-lg bg-[#0a0e1a] border border-white/10 flex items-center justify-center text-[#67e8f9]">
                               <FiUsers size={14} />
                             </div>
                             <span className="font-bold text-white text-sm">{item.team?.name || 'Team'}</span>

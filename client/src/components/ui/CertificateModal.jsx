@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+﻿import React, { useRef, useEffect } from 'react';
 import { FiDownload, FiX, FiAward, FiCheckCircle } from 'react-icons/fi';
 import Button from './Button';
 
@@ -56,7 +56,7 @@ const CertificateModal = ({ isOpen, onClose, participantName, hackathonTitle, is
     // 4. Header Branding
     ctx.font = '900 24px sans-serif';
     const brandGrad = ctx.createLinearGradient(400, 0, 800, 0);
-    brandGrad.addColorStop(0, '#d0bcff');
+    brandGrad.addColorStop(0, '#67e8f9');
     brandGrad.addColorStop(1, '#89ceff');
     ctx.fillStyle = brandGrad;
     ctx.textAlign = 'center';
@@ -154,7 +154,7 @@ const CertificateModal = ({ isOpen, onClose, participantName, hackathonTitle, is
         {/* Modal Header */}
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
               <FiAward className="text-xl" />
             </div>
             <div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Card, { StatCard } from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -189,12 +189,12 @@ const OrganizerDashboard = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       {/* Glow */}
-      <div className="fixed top-[15%] left-[20%] w-[500px] h-[500px] bg-[#a078ff]/10 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse"></div>
+      <div className="fixed top-[15%] left-[20%] w-[500px] h-[500px] bg-[#06b6d4]/10 rounded-full blur-[140px] pointer-events-none -z-10 animate-pulse"></div>
 
       {/* Header Bar */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <span className="text-xs font-mono-code uppercase tracking-widest text-[#d0bcff]">Organizer Portal</span>
+          <span className="text-xs font-mono-code uppercase tracking-widest text-[#67e8f9]">Organizer Portal</span>
           <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-white mt-1">Organizer Dashboard</h1>
         </div>
         <button
@@ -210,7 +210,7 @@ const OrganizerDashboard = () => {
         <div className="glass-card p-6 rounded-2xl relative overflow-hidden">
           <div className="flex justify-between items-start mb-2">
             <span className="text-xs font-mono-code uppercase tracking-widest text-gray-400">My Hackathons</span>
-            <FiCalendar className="text-[#d0bcff] text-xl" />
+            <FiCalendar className="text-[#67e8f9] text-xl" />
           </div>
           <div className="text-4xl font-black font-display text-white">{stats.totalHackathons || hackathons.length}</div>
           <p className="text-[10px] font-mono-code text-emerald-400 mt-2">Active Events Hosted</p>
@@ -239,7 +239,7 @@ const OrganizerDashboard = () => {
       {hackathons.length > 0 && (
         <div className="space-y-3">
           <div className="flex items-center gap-2">
-            <FiTrendingUp className="text-[#d0bcff]" />
+            <FiTrendingUp className="text-[#67e8f9]" />
             <h3 className="text-base font-bold font-display text-white">Event Performance Overview</h3>
             <span className="ml-auto text-xs font-mono-code text-gray-500">Registrations vs Submissions</span>
           </div>
@@ -251,9 +251,9 @@ const OrganizerDashboard = () => {
       <div className="space-y-4">
         <div className="flex justify-between items-center">
           <h3 className="text-xl font-bold font-display text-white flex items-center gap-2">
-            <FiLayers className="text-[#d0bcff]" /> Active Deployments
+            <FiLayers className="text-[#67e8f9]" /> Active Deployments
           </h3>
-          <span className="text-xs font-mono-code text-[#d0bcff]">Live Event Operations</span>
+          <span className="text-xs font-mono-code text-[#67e8f9]">Live Event Operations</span>
         </div>
 
         {hackathons.length > 0 ? (
@@ -266,7 +266,7 @@ const OrganizerDashboard = () => {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => handleOpenEditModal(h)}
-                        className="text-gray-500 hover:text-[#d0bcff] transition"
+                        className="text-gray-500 hover:text-[#67e8f9] transition"
                         title="Edit Hackathon"
                       >
                         <FiEdit3 size={16} />
@@ -296,7 +296,7 @@ const OrganizerDashboard = () => {
                     </div>
                     <div className="flex justify-between text-gray-400">
                       <span>Judges Assigned</span>
-                      <span className="text-[#d0bcff] font-bold">{h.judges?.length || 0}</span>
+                      <span className="text-[#67e8f9] font-bold">{h.judges?.length || 0}</span>
                     </div>
                   </div>
                 </div>
@@ -330,7 +330,7 @@ const OrganizerDashboard = () => {
       {/* Judge Allocation Table matching Stitch design */}
       <div className="glass-card rounded-3xl p-6 sm:p-8 space-y-6 border border-white/10">
         <h3 className="text-xl font-bold font-display text-white flex items-center gap-2">
-          <FiUserCheck className="text-[#d0bcff]" /> Judge Pool Allocation
+          <FiUserCheck className="text-[#67e8f9]" /> Judge Pool Allocation
         </h3>
 
         <div className="overflow-x-auto">
@@ -347,7 +347,7 @@ const OrganizerDashboard = () => {
               {approvedJudges.map((j) => (
                 <tr key={j._id}>
                   <td className="font-bold text-white flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-[#a078ff]/20 text-[#d0bcff] flex items-center justify-center font-bold text-xs">
+                    <div className="w-8 h-8 rounded-full bg-[#06b6d4]/20 text-[#67e8f9] flex items-center justify-center font-bold text-xs">
                       {j.name?.[0] || 'J'}
                     </div>
                     <span>{j.name}</span>

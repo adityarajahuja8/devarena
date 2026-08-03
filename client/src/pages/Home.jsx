@@ -47,7 +47,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/50 border border-purple-800/40 text-purple-300 text-xs font-bold uppercase tracking-wider mb-6"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/50 border border-cyan-800/40 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-6"
         >
           <FiZap className="text-amber-400" /> DevArena — Where Innovation Competes
         </motion.div>
@@ -105,7 +105,7 @@ const Home = () => {
       <section className="max-w-6xl mx-auto px-4 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/10 pb-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-purple-400">Featured Events</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Featured Events</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white mt-1">
               Top Upcoming & Live Hackathons
             </h2>
@@ -130,7 +130,7 @@ const Home = () => {
                 <div className="space-y-3">
                   <div className="flex justify-between items-start">
                     <Badge status={hackathon.status}>{hackathon.status}</Badge>
-                    <span className="text-xs text-purple-400 font-semibold px-2 py-0.5 rounded bg-purple-950/40 border border-purple-800/30">
+                    <span className="text-xs text-cyan-400 font-semibold px-2 py-0.5 rounded bg-cyan-950/40 border border-cyan-800/30">
                       {hackathon.mode}
                     </span>
                   </div>
@@ -168,7 +168,7 @@ const Home = () => {
       {/* Why Participate / Platform Pillars */}
       <section className="max-w-6xl mx-auto px-4 space-y-8">
         <div className="text-center max-w-2xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-widest text-purple-400">Built for Growth</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Built for Growth</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white mt-1">
             Why Organizers & Builders Choose DevArena
           </h2>
@@ -176,7 +176,7 @@ const Home = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card hover className="p-6 space-y-3">
-            <div className="w-10 h-10 rounded-lg bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+            <div className="w-10 h-10 rounded-lg bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl">
               <FiShield />
             </div>
             <h3 className="text-base font-bold font-display text-white">4-Role Governed System</h3>

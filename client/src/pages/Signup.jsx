@@ -51,17 +51,17 @@ const Signup = () => {
   return (
     <div className="min-h-[85vh] flex items-center justify-center px-4 py-16 relative overflow-hidden">
       {/* Atmosphere Background Orbs */}
-      <div className="absolute w-[500px] h-[500px] bg-[#a078ff]/10 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse"></div>
+      <div className="absolute w-[500px] h-[500px] bg-[#06b6d4]/8 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse"></div>
 
       <div className="w-full max-w-[520px]">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-8">
           <div className="flex items-center gap-2.5 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#a078ff] to-[#6d3bd7] flex items-center justify-center shadow-[0_0_20px_rgba(160,120,255,0.3)]">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#06b6d4] to-[#0e7490] flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.3)]">
               <FiHexagon className="text-white text-xl" />
             </div>
             <span className="font-display font-extrabold text-2xl tracking-tight text-white">
-              Dev<span className="text-[#d0bcff]">Arena</span>
+              Dev<span className="text-[#06b6d4]">Arena</span>
             </span>
           </div>
           <h1 className="text-3xl font-extrabold font-display text-white">Create Account</h1>
@@ -75,7 +75,7 @@ const Signup = () => {
             <label className="text-[11px] font-mono-code uppercase tracking-wider text-gray-400 block mb-2">
               Choose Your Role
             </label>
-            <div className="grid grid-cols-3 gap-1.5 p-1.5 bg-[#0e0e0e] rounded-xl border border-white/10">
+            <div className="grid grid-cols-3 gap-1.5 p-1.5 bg-[#0a0e1a] rounded-xl border border-[#06b6d4]/15">
               {[
                 { id: 'participant', label: 'Participant' },
                 { id: 'organizer', label: 'Organizer' },
@@ -87,7 +87,7 @@ const Signup = () => {
                   onClick={() => setFormData({ ...formData, role: r.id })}
                   className={`py-2.5 px-3 rounded-lg text-xs font-mono-code uppercase tracking-wider font-bold transition-all ${
                     formData.role === r.id
-                      ? 'bg-gradient-to-r from-[#a078ff] to-[#6d3bd7] text-white shadow-lg shadow-[#a078ff]/25'
+                      ? 'bg-gradient-to-r from-[#06b6d4] to-[#0e7490] text-white shadow-lg shadow-[#06b6d4]/25'
                       : 'text-gray-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
@@ -97,8 +97,8 @@ const Signup = () => {
             </div>
 
             {(formData.role === 'organizer' || formData.role === 'judge') && (
-              <div className="mt-3 p-3.5 rounded-xl bg-[#a078ff]/10 border border-[#a078ff]/20 flex items-start gap-3 text-xs text-gray-300">
-                <FiInfo className="text-[#d0bcff] shrink-0 mt-0.5" size={16} />
+              <div className="mt-3 p-3.5 rounded-xl bg-[#06b6d4]/10 border border-[#06b6d4]/20 flex items-start gap-3 text-xs text-gray-300">
+                <FiInfo className="text-[#67e8f9] shrink-0 mt-0.5" size={16} />
                 <span>
                   Note: <strong className="text-white">{formData.role}</strong> accounts require Admin approval before you can access management features.
                 </span>
@@ -168,7 +168,7 @@ const Signup = () => {
 
           <div className="mt-8 text-center text-xs text-gray-400">
             Already have an account?{' '}
-            <Link to="/login" className="text-[#d0bcff] font-bold hover:underline">
+            <Link to="/login" className="text-[#38bdf8] font-bold hover:text-[#67e8f9] hover:underline transition">
               Log In
             </Link>
           </div>

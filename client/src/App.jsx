@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
@@ -37,7 +37,7 @@ const AppContent = () => {
   const showNavbar = !showSidebar;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#030303] text-[#e5e2e1]">
+    <div className="min-h-screen flex flex-col bg-[#050810] text-[#e5e2e1]">
       <Toaster
         position="top-right"
         toastOptions={{

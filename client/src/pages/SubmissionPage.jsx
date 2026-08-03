@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Card from '../components/ui/Card';
@@ -126,12 +126,12 @@ const SubmissionPage = () => {
     <div className="max-w-4xl mx-auto px-4 py-12 space-y-8">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-widest text-purple-400">Project Submission</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Project Submission</span>
           <h1 className="text-3xl font-extrabold font-display text-white mt-1">
             {submission ? 'Edit Project Submission' : 'Submit Hackathon Project'}
           </h1>
           <p className="text-sm text-gray-400 mt-1">
-            Team: <strong className="text-purple-300">{team.name}</strong> • Hackathon: <strong className="text-white">{hackathon?.title}</strong>
+            Team: <strong className="text-cyan-300">{team.name}</strong> • Hackathon: <strong className="text-white">{hackathon?.title}</strong>
           </p>
         </div>
         {submission && <Badge status={submission.status}>{submission.status}</Badge>}

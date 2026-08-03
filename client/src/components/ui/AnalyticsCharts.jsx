@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   AreaChart, Area, BarChart, Bar,
   PieChart, Pie, Cell,
@@ -7,7 +7,7 @@ import {
 
 // ─── Shared theme tokens ───────────────────────────────────────────────────
 const COLORS = {
-  violet: '#a078ff',
+  violet: '#06b6d4',
   blue:   '#89ceff',
   pink:   '#ffafd3',
   gold:   '#fbbf24',
@@ -47,7 +47,7 @@ export const RegistrationsChart = ({ data = [] }) => {
   return (
     <div className="glass-card rounded-2xl p-6 space-y-3 border border-white/10">
       <div className="flex items-center gap-3 mb-1">
-        <div className="w-2 h-2 rounded-full bg-[#a078ff] animate-pulse" />
+        <div className="w-2 h-2 rounded-full bg-[#06b6d4] animate-pulse" />
         <h3 className="text-sm font-bold font-display text-white">Registrations Over Time</h3>
         <span className="ml-auto text-[10px] font-mono-code text-gray-500">Last 6 months</span>
       </div>
@@ -197,7 +197,7 @@ export const HackathonStatsChart = ({ hackathons = [] }) => {
   return (
     <div className="glass-card rounded-2xl p-6 space-y-3 border border-white/10">
       <div className="flex items-center gap-3 mb-1">
-        <div className="w-2 h-2 rounded-full bg-[#a078ff] animate-pulse" />
+        <div className="w-2 h-2 rounded-full bg-[#06b6d4] animate-pulse" />
         <h3 className="text-sm font-bold font-display text-white">Registrations vs Submissions</h3>
         <span className="ml-auto text-[10px] font-mono-code text-gray-500">Per hackathon</span>
       </div>
